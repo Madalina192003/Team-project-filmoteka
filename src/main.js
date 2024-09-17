@@ -1,6 +1,6 @@
 "use strict";
 
+import { getMovies } from './js/get-movies.js';
 
 
-
-import { testFetchMovieTrailer, testFetchMovies } from './partials/testing-get-movies';
+import { testFetchMovieTrailer, testFetchMovies } from './js/testing-get-movies.js';
