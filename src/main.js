@@ -17,3 +17,4 @@ import {
   updateFilmInStorage,
 } from './js/queueWatchedManager.js';
 import { modal, btn, closeBtn } from './js/footerModal.js';
+import { scrollFunction, backTop } from './js/scrollTopButton.js';
