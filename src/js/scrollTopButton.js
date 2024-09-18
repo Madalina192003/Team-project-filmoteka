@@ -1,22 +1,27 @@
-let projectTopButton = document.getElementById('scrollTopBtn');
+document.addEventListener('DOMContentLoaded', function () {
+  let projectTopButton = document.getElementById('scrollTopBtn');
 
-window.onscroll = function () {
-  scrollFunction();
-};
+  window.onscroll = function () {
+    scrollFunction();
+  };
 
-export function scrollFunction() {
-  if (document.body.scrollTop > 35 || document.documentElement.scrollTop > 35) {
-    projectTopButton.style.display = 'block';
-  } else {
-    projectTopButton.style.display = 'none';
+  function scrollFunction() {
+    if (
+      document.body.scrollTop > 35 ||
+      document.documentElement.scrollTop > 35
+    ) {
+      projectTopButton.style.display = 'block';
+    } else {
+      projectTopButton.style.display = 'none';
+    }
   }
-}
 
-projectTopButton.addEventListener('click', backTop);
+  projectTopButton.addEventListener('click', backTop);
 
-export function backTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth',
-  });
-}
+  function backTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }
+});
