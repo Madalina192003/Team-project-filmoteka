@@ -16,3 +16,4 @@ import {
   addToWatched,
   updateFilmInStorage,
 } from './js/queueWatchedManager.js';
+import { modal, btn, closeBtn } from './js/footerModal.js';
