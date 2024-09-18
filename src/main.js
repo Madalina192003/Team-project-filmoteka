@@ -11,3 +11,8 @@ import {
   getFromStorage,
   removeFromStorage,
 } from './js/getLocalStorage.js';
+import {
+  addToQueue,
+  addToWatched,
+  updateFilmInStorage,
+} from './js/queueWatchedManager.js';
