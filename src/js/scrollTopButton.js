@@ -1,6 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
   let projectTopButton = document.getElementById('scrollTopBtn');
 
+  if (projectTopButton) {
+    projectTopButton.addEventListener('click', backTop);
+  }
+
   window.onscroll = function () {
     scrollFunction();
   };
@@ -15,8 +19,6 @@ document.addEventListener('DOMContentLoaded', function () {
       projectTopButton.style.display = 'none';
     }
   }
-
-  projectTopButton.addEventListener('click', backTop);
 
   function backTop() {
     window.scrollTo({
