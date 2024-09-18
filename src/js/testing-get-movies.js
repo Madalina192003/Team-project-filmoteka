@@ -1,6 +1,6 @@
 "use strict";
 
-import { getTrailer, getMovies } from './get-movies.js';
+import { getTrailer, getMovies } from './getMovies.js';
 import Notiflix from 'notiflix';
 
 // Test pentru getTrailer

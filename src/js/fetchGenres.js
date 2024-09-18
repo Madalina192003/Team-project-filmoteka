@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { API_KEY, BASE_URL } from './get-movies.js';
+import { API_KEY, BASE_URL } from './getMovies.js';
 
 export let genres = [];
 
