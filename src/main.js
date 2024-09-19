@@ -21,4 +21,4 @@ import { scrollFunction, backTop } from './js/scrollTopButton.js';
 import {footerPagination} from './js/footerPagination.js';
 import {optionsPagination} from './js/optionsPagination';
 import { fetchGenres} from './js/fetchGenres.js';
-import { createFilmCard } from './js/filmCards.js';
+import { filmCard } from './js/filmCards.js';
