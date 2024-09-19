@@ -11,3 +11,12 @@ import {
   getFromStorage,
   removeFromStorage,
 } from './js/getLocalStorage.js';
+import {
+  addToQueue,
+  addToWatched,
+  updateFilmInStorage,
+} from './js/queueWatchedManager.js';
+import { modal, btn, closeBtn } from './js/footerModal.js';
+import { scrollFunction, backTop } from './js/scrollTopButton.js';
+import {footerPagination} from './js/footerPagination.js';
+import {optionsPagination} from './js/optionsPagination';
