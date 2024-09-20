@@ -30,3 +30,4 @@ window.addEventListener('load', async () => {
     console.alert('Eroare la încărcarea filmelor populare:', error);
   }
 });
+import { searchForm } from './js/searchForm.js';
