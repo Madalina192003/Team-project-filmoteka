@@ -22,3 +22,4 @@ import {footerPagination} from './js/footerPagination.js';
 import {optionsPagination} from './js/optionsPagination';
 import { fetchGenres} from './js/fetchGenres.js';
 import { filmCard } from './js/filmCards.js';
+import { openFilmModal } from './js/openFilmModal.js';
