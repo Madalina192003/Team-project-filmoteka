@@ -18,7 +18,7 @@ export const openFilmModal = (filmData, cardHtml) => {
     return;
   }
 
-  // Obține numele genurilor
+  // nume genurilor
   const genreNames = (Array.isArray(filmData.genre_ids) && filmData.genre_ids.length > 0) 
     ? filmData.genre_ids
         .map(id => genres.find(genre => genre.id === id)?.name || 'Unknown')
@@ -34,14 +34,14 @@ export const openFilmModal = (filmData, cardHtml) => {
       : filmData.original_name || filmData.name;
   }
 
-  // Obține titlul filmului și ID-ul
+  //  titlul film și ID-ul
   const filmTitle = filmData.title || filmData.name;
   const filmId = filmData.id;
 
-  // Verifică dacă filmul este deja în localStorage
+  // verifică dacă filmul este deja în localStorage
   const isFilmInQueue = Boolean(getFromStorage(filmData.id));
 
-  // Construiește HTML-ul pentru fereastra modală
+  // faceHTML-ul pentru fereastra modală
   const modalHtml = `
     <div class="film-modal">
         <div class="film-modal-content">
@@ -67,7 +67,7 @@ export const openFilmModal = (filmData, cardHtml) => {
       </div>
     </div>`;
 
-  // Adaugă modalul în DOM
+  // il trimite in DOM
   document.body.insertAdjacentHTML('beforeend', modalHtml);
   const modal = document.querySelector('.film-modal');
 
