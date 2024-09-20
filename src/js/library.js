@@ -14,7 +14,7 @@ function CardClick(event) {
   }
 }
 
-function LibraryOrQueueClick(event) {
+function LibraryOrQueueclick(event) {
   event.preventDefault();
 
   const watched = document.querySelector('.watched');
@@ -107,8 +107,8 @@ export function setupMyLibraryLink() {
   const watchedLink = document.querySelector('a[data-request="watched"]');
 
   if (myLibraryLink)
-    myLibraryLink.addEventListener('click', LibraryOrQueueClick);
-  if (queueLink) queueLink.addEventListener('click', LibraryOrQueueClick);
+    myLibraryLink.addEventListener('click', LibraryOrQueueclick);
+  if (queueLink) queueLink.addEventListener('click', LibraryOrQueueclick);
   if (watchedLink) watchedLink.addEventListener('click', WatchedClick);
 }
 
