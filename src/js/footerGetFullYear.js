@@ -4,4 +4,4 @@ const footerGetFullYear = () => {
     yearSpan.textContent = currentYear;
   };
 
-  export default footerGetFullYear;
+  export { footerGetFullYear };
