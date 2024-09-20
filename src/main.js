@@ -16,6 +16,7 @@ import {
   addToWatched,
   updateFilmInStorage,
 } from './js/queueWatchedManager.js';
+
 // import { modal, btn, closeBtn } from './js/footerModal.js';  -aveam erori in consola de la aceste 2 importuri
 // import { scrollFunction, backTop } from './js/scrollTopButton.js';
 
@@ -29,3 +30,4 @@ window.addEventListener('load', async () => {
     console.alert('Eroare la încărcarea filmelor populare:', error);
   }
 });
+
