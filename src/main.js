@@ -16,10 +16,18 @@ import {
   addToWatched,
   updateFilmInStorage,
 } from './js/queueWatchedManager.js';
-import { modal, btn, closeBtn } from './js/footerModal.js';
-import { scrollFunction, backTop } from './js/scrollTopButton.js';
-import {footerPagination} from './js/footerPagination.js';
-import {optionsPagination} from './js/optionsPagination';
-import { fetchGenres} from './js/fetchGenres.js';
-import { filmCard } from './js/filmCards.js';
-import { openFilmModal } from './js/openFilmModal.js';
+
+// import { modal, btn, closeBtn } from './js/footerModal.js';  -aveam erori in consola de la aceste 2 importuri
+// import { scrollFunction, backTop } from './js/scrollTopButton.js';
+
+import footerGetFullYear from './js/footerGetFullYear.js';
+
+window.addEventListener('load', async () => {
+  try {
+    footerGetFullYear();
+    // de pus restul de functii necesare la incarcarea paginii
+  } catch (error) {
+    console.alert('Eroare la încărcarea filmelor populare:', error);
+  }
+});
+
