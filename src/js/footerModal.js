@@ -4,19 +4,19 @@ const btn = document.getElementById('openFooterModal');
 const closeBtn = document.querySelector('.close-button-member');
 
 // Funcție pentru a deschide fereastra modală
-function openModal() {
+export function openModal() {
   modal.style.display = 'block';
   window.addEventListener('keydown', handleEscapeKeyPress);
 }
 
 // Funcție pentru a închide fereastra modală
-function closeModal() {
+export function closeModal() {
   modal.style.display = 'none';
   window.removeEventListener('keydown', handleEscapeKeyPress);
 }
 
 // Funcție pentru a gestiona apăsarea tastei Escape
-function handleEscapeKeyPress(event) {
+export function handleEscapeKeyPress(event) {
   if (event.key === 'Escape') {
     closeModal();
   }
