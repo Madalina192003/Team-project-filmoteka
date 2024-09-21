@@ -1,10 +1,16 @@
 import Pagination from 'tui-pagination';
 import 'tui-pagination/dist/tui-pagination.css';
 import { getMovies } from './getMovies';
+
 import {createFilmCard} from './filmCards.js';
 import '../css/footerPagination.css';
 import { options } from './optionsPagination.js';
 import { currentSearchQuery } from './searchForm.js';
+
+
+import { filmCards } from './filmCards';
+import '../css/footerPagination.css';
+import { optionsPagination } from './optionsPagination';
 
 
 export async function footerPagination() {

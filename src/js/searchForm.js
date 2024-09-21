@@ -1,7 +1,14 @@
+
 import { getMovies } from './getMovies.js';
 import { options } from './optionsPagination.js';
 import { footerPagination } from './footerPagination.js';
 import { createFilmCard } from './filmCards.js';
+
+import { getMovies } from './getMovies';
+import { options } from './optionsPagination';
+import { footerPagination } from './footerPagination';
+import { filmCards } from './filmCards';
+
 import Notiflix from 'notiflix';
 
 let searchQuery = '';
@@ -40,7 +47,11 @@ searchForm.addEventListener('submit', async e => {
     options.totalItems = moviesData.total_pages;
     footerPagination(options.totalItems);
 
+
     createFilmCard(moviesData);
+
+    filmCards(moviesData);
+
 
     searchForm.elements.searchQuery.value = '';
   } catch (error) {
@@ -53,4 +64,7 @@ searchForm.addEventListener('submit', async e => {
 
 searchIcon.addEventListener('click', () => {
   searchForm.dispatchEvent(new Event('submit'));
+
 });
+});
+
