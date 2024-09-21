@@ -37,6 +37,8 @@ div a {
   margin: 20px auto;
   padding: 0;
 }
+
+
 @media (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
@@ -131,6 +133,15 @@ div a {
   height: 24px;
 }
 
+.fa-search {
+  font-size: 25px;
+  line-height: 25px;
+  color: #fff;
+  vertical-align: middle;
+  cursor: pointer;
+  right: 0;
+}
+
 .logo-container {
   display: flex;
   justify-content: flex-start;
@@ -147,6 +158,12 @@ div a {
 .logo-film-now svg {
   width: 40px;
   height: 40px;
+}
+
+.film-icon {
+  font-size: 40px;
+  color: #fff;
+  flex-shrink: 0;
 }
 
 /* Media queries */
@@ -195,6 +212,9 @@ div a {
     width: 150px;
     flex-grow: 1;
   }
+     .film-icon {
+       font-size: 30px;
+     }
 }
 
 @media (max-width: 768px) {
@@ -247,6 +267,28 @@ div a {
   .submit-btn {
     left: 300px;
     z-index: 2;
+
+}
+.logo-container {
+  gap: 20px;
+  display: flex;
+  justify-content: flex-start;
+}
+.logo-container a .title {
+  font-size: 60px;
+}
+.film-icon {
+  font-size: 80px;
+}
+.fa-search {
+  font-size: 35px;
+  line-height: 35px;
+}
+
+.film-icon {
+  font-size: 80px;
+}
+
   }
   .logo-container {
     gap: 20px;
@@ -259,6 +301,7 @@ div a {
   .film-icon {
     font-size: 80px;
   }
+
 }
 
 @media (min-width: 1280px) {
@@ -294,4 +337,11 @@ div a {
   .search-form-input {
     padding: 10px;
   }
+  .fa-search {
+      font-size: 45px;
+      line-height: 45px;
+    }
+  .film-icon {
+           font-size: 100px;
+         }
 }
