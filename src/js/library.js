@@ -1,4 +1,4 @@
-import { getFromStorage } from './getLocalStorage';
+import { getLocalStorage } from './getLocalStorage';
 import { openFilmModal } from './openFilmModal';
 
 let isEventAttached = false;

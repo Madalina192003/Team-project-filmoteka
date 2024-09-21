@@ -1,24 +1,29 @@
-//Get the button
-let mybutton = document.getElementById('scrollToTopBtn');
+document.addEventListener('DOMContentLoaded', function () {
+  let projectTopButton = document.getElementById('scrollTopBtn');
 
-window.onscroll = function () {
-  scrollFunction();
-};
-
-export function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = 'block';
-  } else {
-    mybutton.style.display = 'none';
+  if (projectTopButton) {
+    projectTopButton.addEventListener('click', backTop);
   }
-}
 
+  window.onscroll = function () {
+    scrollFunction();
+  };
 
-mybutton.addEventListener('click', backToTop);
+  function scrollFunction() {
+    if (
+      document.body.scrollTop > 35 ||
+      document.documentElement.scrollTop > 35
+    ) {
+      projectTopButton.style.display = 'block';
+    } else {
+      projectTopButton.style.display = 'none';
+    }
+  }
 
-export function backToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth',
-  });
-}
+  function backTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }
+});

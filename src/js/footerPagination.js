@@ -1,20 +1,12 @@
-import Pagination from 'tui-pagination';
+import { Pagination } from 'tui-pagination';
 import 'tui-pagination/dist/tui-pagination.css';
 import { getMovies } from './getMovies';
-
-import {createFilmCard} from './filmCards.js';
-import '../css/footerPagination.css';
-import { options } from './optionsPagination.js';
-import { currentSearchQuery } from './searchForm.js';
-
-
 import { filmCards } from './filmCards';
 import '../css/footerPagination.css';
 import { optionsPagination } from './optionsPagination';
 
-
 export async function footerPagination() {
-  const pagination = new Pagination(document.getElementById('pagination'), options);
+  const pagination = new Pagination('pagination', options);
 
   pagination.on('afterMove', onPaginationClick);
 
@@ -27,7 +19,7 @@ export async function footerPagination() {
       hideBtn(selectedPage);
     }
 
-    const dataResponse = await getMovies(currentSearchQuery, selectedPage);
+    const dataResponse = await fetchMovies(currentSearchQuery, selectedPage);
     console.log(dataResponse);
 
     createFilmCard(dataResponse);

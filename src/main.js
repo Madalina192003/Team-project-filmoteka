@@ -16,27 +16,18 @@ import {
   addToWatched,
   updateFilmInStorage,
 } from './js/queueWatchedManager.js';
-import { createFilmCard } from './js/filmCards.js';
 
-// import { modal, btn, closeBtn } from './js/footerModal.js';
-import { scrollFunction, backToTop } from './js/scrollTopButton.js';
-import { setupMyLibraryLink } from './js/library.js';
-import { openFilmModal } from './js/openFilmModal.js';
-import { footerPagination } from './js/footerPagination.js';
-import { currentSearchQuery } from './js/searchForm.js';
-import { footerGetFullYear } from './js/footerGetFullYear.js';
+import { modal, btn, closeBtn } from './js/footerModal.js';
+// import { scrollFunction, backTop } from './js/scrollTopButton.js';
+
+import footerGetFullYear from './js/footerGetFullYear.js';
 
 window.addEventListener('load', async () => {
   try {
     footerGetFullYear();
-    setupMyLibraryLink();
-    scrollFunction();
-    backToTop();
-    const popularMovies = await getMovies();
-    createFilmCard(popularMovies);
-    footerPagination(popularMovies);
+    // de pus restul de functii necesare la incarcarea paginii
   } catch (error) {
-   console.log('Eroare la încărcarea filmelor populare:', error);
+    console.alert('Eroare la încărcarea filmelor populare:', error);
   }
 });
 import { searchForm } from './js/searchForm.js';
