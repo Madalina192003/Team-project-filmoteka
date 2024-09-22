@@ -1,12 +1,8 @@
-"use strict";
-
-// fetch trailers and movie functions //
 import axios from 'axios';
 import Notiflix from 'notiflix';
 
 export const API_KEY = '493c6d740f024fcc02750f44c1518471';
 export const BASE_URL = `https://api.themoviedb.org/3`;
-
 
 export async function getTrailer(movieId) {
   const trailerUrl = `${BASE_URL}/movie/${movieId}/videos?api_key=${API_KEY}&language=en-US`;
@@ -43,6 +39,7 @@ export async function getMovies(searchQuery = '', page = 1) {
 
   try {
     const response = await axios.get(url);
+    console.log('Răspuns API:', response.data); // Adăugat pentru a verifica structura datelor
 
     const moviesWithTrailers = await Promise.all(
       response.data.results.map(async movie => {
