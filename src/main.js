@@ -26,7 +26,6 @@ import { footerPagination } from './js/footerPagination.js';
 import { currentSearchQuery } from './js/searchForm.js';
 import { footerGetFullYear } from './js/footerGetFullYear.js';
 
-
 window.addEventListener('load', async () => {
   try {
     footerGetFullYear();
