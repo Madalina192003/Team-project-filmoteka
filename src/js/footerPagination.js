@@ -2,19 +2,18 @@ import Pagination from 'tui-pagination';
 import 'tui-pagination/dist/tui-pagination.css';
 import { getMovies } from './getMovies';
 
-import {createFilmCard} from './filmCards.js';
+import { createFilmCard } from './filmCards.js';
 import '../css/footerPagination.css';
 import { options } from './optionsPagination.js';
 import { currentSearchQuery } from './searchForm.js';
 
-
-import { filmCards } from './filmCards';
 import '../css/footerPagination.css';
-import { optionsPagination } from './optionsPagination';
-
 
 export async function footerPagination() {
-  const pagination = new Pagination(document.getElementById('pagination'), options);
+  const pagination = new Pagination(
+    document.getElementById('pagination-container'),
+    options
+  );
 
   pagination.on('afterMove', onPaginationClick);
 
