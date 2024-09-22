@@ -1,5 +1,5 @@
 import Pagination from 'tui-pagination';
-import { fetchMovies } from './fetchMovies';
+import { getMovies } from './getMovies';
 import { options } from './optionsPagination';
 import 'tui-pagination/dist/tui-pagination.css';
 import { createFilmCard } from './filmCards';
