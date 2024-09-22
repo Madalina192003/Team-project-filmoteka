@@ -18,7 +18,14 @@ import {
 } from './js/queueWatchedManager.js';
 import { createFilmCard } from './js/filmCards.js';
 
-import { modal, btn, closeBtn } from './js/footerModal.js';
+import {
+  modal,
+  btn,
+  closeBtn,
+  openModal,
+  closeModal,
+  handleEscapeKeyPress,
+} from './js/footerModal.js';
 import { scrollFunction, backToTop } from './js/scrollTopButton.js';
 import { setupMyLibraryLink } from './js/library.js';
 import { openFilmModal } from './js/openFilmModal.js';
@@ -40,4 +47,5 @@ window.addEventListener('load', async () => {
     console.log('Eroare la încărcarea filmelor populare:', error);
   }
 });
+
 import { searchForm } from './js/searchForm.js';

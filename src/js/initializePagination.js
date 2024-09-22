@@ -12,40 +12,37 @@ export async function createPagination() {
   pagination.on('afterMove', onPaginationClick);
 
   async function onPaginationClick(e) {
-    const lastPageNumber = Number(
-      document.querySelector('.tui-ico-last').textContent
-    );
-    const selectedPage = e.page;
-    if ((selectedPage > 1) & (selectedPage <= lastPageNumber)) {
-      hideBtn(selectedPage);
+    try {
+      const lastPageNumber = getLastPageNumber();
+      const selectedPage = e.page;
+      if (selectedPage > 1 && selectedPage <= lastPageNumber) {
+        hideBtn(selectedPage);
+      }
+
+      const dataResponse = await fetchMovies(currentSearchQuery, selectedPage);
+      console.log(dataResponse);
+
+      createFilmCard(dataResponse);
+      scrollToTop();
+    } catch (error) {
+      console.error('Error fetching movies:', error);
     }
-
-    const dataResponse = await fetchMovies(currentSearchQuery, selectedPage);
-    console.log(dataResponse);
-
-    createFilmCard(dataResponse);
-
-    scrollToTop();
   }
+
   function hideBtn(selectedPage) {
     const firstPageBtnRef = document.querySelector('.custom-class-first');
     const lastPageBtnRef = document.querySelector('.custom-class-last');
+    const lastPageNumber = getLastPageNumber();
 
-    const lastPageNumber = Number(
-      document.querySelector('.tui-ico-last').textContent
+    firstPageBtnRef.classList.toggle('btn-hidden', selectedPage < 4);
+    lastPageBtnRef.classList.toggle(
+      'btn-hidden',
+      lastPageNumber - selectedPage < 3
     );
+  }
 
-    if (selectedPage < 4) {
-      firstPageBtnRef.classList.add('btn-hidden');
-      return;
-    }
-    if (lastPageNumber - selectedPage < 3) {
-      lastPageBtnRef.classList.add('btn-hidden');
-      return;
-    }
-
-    lastPageBtnRef.classList.remove('btn-hidden');
-    firstPageBtnRef.classList.remove('btn-hidden');
+  function getLastPageNumber() {
+    return Number(document.querySelector('.tui-ico-last').textContent);
   }
 
   function scrollToTop() {
