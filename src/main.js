@@ -40,3 +40,4 @@ window.addEventListener('load', async () => {
    console.log('Eroare la încărcarea filmelor populare:', error);
   }
 });
+import { searchForm } from './js/searchForm.js';

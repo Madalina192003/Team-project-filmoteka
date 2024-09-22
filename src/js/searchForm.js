@@ -1,3 +1,4 @@
+
 import { getMovies } from './getMovies.js';
 import { options } from './optionsPagination.js';
 import { footerPagination } from './footerPagination.js';
