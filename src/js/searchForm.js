@@ -1,4 +1,3 @@
-
 import { getMovies } from './getMovies.js';
 import { options } from './optionsPagination.js';
 import { footerPagination } from './footerPagination.js';
@@ -47,11 +46,9 @@ searchForm.addEventListener('submit', async e => {
     options.totalItems = moviesData.total_pages;
     footerPagination(options.totalItems);
 
-
     createFilmCard(moviesData);
 
     filmCards(moviesData);
-
 
     searchForm.elements.searchQuery.value = '';
   } catch (error) {
@@ -64,7 +61,4 @@ searchForm.addEventListener('submit', async e => {
 
 searchIcon.addEventListener('click', () => {
   searchForm.dispatchEvent(new Event('submit'));
-
 });
-});
-
