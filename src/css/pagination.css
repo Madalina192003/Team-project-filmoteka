@@ -1,5 +1,6 @@
-/* Stiluri pentru toate butoanele de paginare, inclusiv săgețile, fără efect de hover */
-#pagination-container .tui-pagination .tui-page-btn,
+/* Stiluri pentru toate butoanele de paginare,
+inclusiv săgețile,
+fără efect de hover #pagination-container .tui-pagination .tui-page-btn,
 #pagination-container .tui-pagination .tui-ico-first,
 #pagination-container .tui-pagination .tui-ico-last,
 #pagination-container .tui-pagination .tui-ico-prev,
@@ -24,10 +25,10 @@
 #pagination-container .tui-pagination .tui-page-btn.tui-is-disabled,
 #pagination-container .tui-pagination .tui-page-btn.tui-is-selected {
   opacity: 0.5; /* Opacitate pentru butoanele dezactivate */
-  pointer-events: none; /* Dezactivează evenimentele de mouse */
+/*pointer-events: none; /* Dezactivează evenimentele de mouse 
 }
 @media (max-width: 500px) {
   .pagination .container #pagination {
     max-width: 300px;
   }
-}
+} */

@@ -6,14 +6,18 @@ import { createFilmCard } from './filmCards.js';
 import Notiflix from 'notiflix';
 
 let searchQuery = '';
+
 export let currentSearchQuery = '';
-
 export const searchForm = document.querySelector('.search-form');
-const searchIcon = document.querySelector('.submit-btn'); //HTML --selector buton, dar trebuie schimbat cu SVG
 
+const searchIcon = document.querySelector('.submit-btn');
+searchIcon.addEventListener('click', () => {
+  searchForm.dispatchEvent(new Event('submit'));
+});
 searchForm.addEventListener('submit', async e => {
   e.preventDefault();
   const userSearchQuery = e.currentTarget.elements.searchQuery.value.trim();
+  console.log('Search query:', userSearchQuery); // Debugging line
 
   if (!userSearchQuery) {
     Notiflix.Notify.failure('Please enter a search term.');
@@ -24,12 +28,11 @@ searchForm.addEventListener('submit', async e => {
 
   try {
     const moviesData = await getMovies(currentSearchQuery);
+    console.log('Movies data:', moviesData); // Debugging line
 
-    console.log('Datele primite după căutare:', moviesData);
-
-    if (!moviesData || moviesData.results.length === 0) {
+    if (!moviesData || !moviesData.results || moviesData.results.length === 0) {
       Notiflix.Notify.failure(
-        `Sorry, we couldn't find any films matching "${currentSearchQuery}". Please try a different search term.`
+        `Sorry, we couldn't find any films matching "${currentSearchQuery}".`
       );
       return;
     } else {
@@ -40,20 +43,11 @@ searchForm.addEventListener('submit', async e => {
 
     options.totalItems = moviesData.total_pages;
     footerPagination(options.totalItems);
-
     createFilmCard(moviesData);
-
-    filmCards(moviesData);
 
     searchForm.elements.searchQuery.value = '';
   } catch (error) {
-    console.error(
-      'Search result is not successful. Enter the correct movie name and press enter',
-      error
-    );
+    console.error('Search result is not successful:', error);
+    Notiflix.Notify.failure('An error occurred while fetching the movies.');
   }
-});
-
-searchIcon.addEventListener('click', () => {
-  searchForm.dispatchEvent(new Event('submit'));
 });

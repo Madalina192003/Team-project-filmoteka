@@ -32,7 +32,6 @@ import { openFilmModal } from './js/openFilmModal.js';
 import { footerPagination } from './js/footerPagination.js';
 import { currentSearchQuery } from './js/searchForm.js';
 import { footerGetFullYear } from './js/footerGetFullYear.js';
-import { createPagination } from './js/initializePagination.js';
 
 window.addEventListener('load', async () => {
   try {
