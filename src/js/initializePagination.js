@@ -4,7 +4,7 @@ import { options } from './optionsPagination';
 import 'tui-pagination/dist/tui-pagination.css';
 import { createFilmCard } from './filmCards';
 import { currentSearchQuery } from './searchForm';
-import './pagination.css';
+import './css/pagination.css';
 
 export async function createPagination() {
   const pagination = new Pagination('pagination', options);
