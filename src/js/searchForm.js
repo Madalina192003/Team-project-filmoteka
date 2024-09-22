@@ -3,11 +3,6 @@ import { options } from './optionsPagination.js';
 import { footerPagination } from './footerPagination.js';
 import { createFilmCard } from './filmCards.js';
 
-import { getMovies } from './getMovies';
-import { options } from './optionsPagination';
-import { footerPagination } from './footerPagination';
-import { filmCards } from './filmCards';
-
 import Notiflix from 'notiflix';
 
 let searchQuery = '';
