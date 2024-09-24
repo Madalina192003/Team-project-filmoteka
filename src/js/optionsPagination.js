@@ -31,13 +31,13 @@ export const options = {
       if (type === 'prev') {
         template =
           '<a href="#" class="arrow tui-page-btn tui-prev custom-class-prev tui-first-child">' +
-          '<span class="material-icons-outlined"><<<back</span>' +
+          '<span class="material-icons-outlined">arrow_back</span>' +
           '</a>';
       }
       if (type === 'next') {
         template =
           '<a href="#" class="arrow tui-page-btn tui-next custom-class-next">' +
-          '<span class="material-icons-outlined">>>>forward</span>' +
+          '<span class="material-icons-outlined">arrow_forward</span>' +
           '</a>';
       }
       if (type === 'last') {
