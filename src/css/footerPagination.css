@@ -19,6 +19,12 @@
 #pagination-container .tui-pagination .tui-ico-ellip {
   border: none; /* Elimină bordura pentru icoane  */
 }
+.pagination-container{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
 
 #pagination-container .tui-pagination .tui-page-btn.tui-is-disabled,
 #pagination-container .tui-pagination .tui-page-btn.tui-is-selected {
