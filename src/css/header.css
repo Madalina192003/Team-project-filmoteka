@@ -300,6 +300,9 @@ div a {
     line-height: 35px;
   }
 
+
+
+
   .film-icon {
     font-size: 80px;
   }
@@ -315,6 +318,7 @@ div a {
 .film-icon {
   font-size: 80px;
 }
+
 
 @media (min-width: 1280px) {
   .header-homescreen {
