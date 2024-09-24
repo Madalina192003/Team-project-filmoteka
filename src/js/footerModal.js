@@ -31,3 +31,6 @@ window.addEventListener('click', function (event) {
     closeModal();
   }
 });
+
+// Exportă elementele pentru a fi utilizate în main.js
+export { modal, btn, closeBtn };

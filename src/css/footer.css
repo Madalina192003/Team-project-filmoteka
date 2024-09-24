@@ -124,11 +124,6 @@ footer {
   font-weight: 500;
 }
 
-.grp-image {
-  width: 60px;
-  border-radius: 50%;
-  border: 2px solid #f0eae6;
-}
 .member-section:hover .last-image {
   border: 3px solid #e6aa13;
 }

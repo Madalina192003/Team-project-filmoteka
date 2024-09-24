@@ -24,5 +24,9 @@ dist-ssr
 *.sw?
 
 
+
 .pullrequestlist.txt
 .mylistforpullrequest.txt
+
+.pullrequest-list.txt
+

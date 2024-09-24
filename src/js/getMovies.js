@@ -1,3 +1,6 @@
+'use strict';
+
+// fetch trailers and movie functions //
 import axios from 'axios';
 import Notiflix from 'notiflix';
 
@@ -39,21 +42,20 @@ export async function getMovies(searchQuery = '', page = 1) {
 
   try {
     const response = await axios.get(url);
-    console.log('Răspuns API:', response.data); // Adăugat pentru a verifica structura datelor
-
     const moviesWithTrailers = await Promise.all(
       response.data.results.map(async movie => {
-        try {
-          const trailerUrl = await getTrailer(movie.id);
-          return { ...movie, trailerUrl };
-        } catch (error) {
-          return { ...movie, trailerUrl: null };
-        }
+        console.log('Fetching trailers for movie ID:', movie.id);
+        const trailerUrl = await getTrailer(movie.id);
+        return { ...movie, trailerUrl };
       })
     );
 
     return { ...response.data, results: moviesWithTrailers };
   } catch (error) {
+    console.error(
+      'Error fetching movies:',
+      error.response ? error.response.data : error
+    );
     Notiflix.Notify.failure(
       'Oops! Something went wrong! Try reloading the page!'
     );
