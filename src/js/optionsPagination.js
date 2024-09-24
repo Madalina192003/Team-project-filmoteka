@@ -25,12 +25,12 @@ export const options = {
       if (type === 'first') {
         template =
           '<a href="#" class="tui-page-btn tui-first custom-class-first">' +
-          '<span class="tui-ico-first">1</span>' +
+          '<span class="tui-ico-first">«</span>' +
           '</a>';
       }
       if (type === 'prev') {
         template =
-          '<a href="#" class="arrow tui-page-btn tui-prev custom-class-prev tui-first-child">' +
+          '<a href="#" class="arrow tui-page-btn tui-prev custom-class-prev">' +
           '<span class="material-icons-outlined">arrow_back</span>' +
           '</a>';
       }
@@ -43,7 +43,7 @@ export const options = {
       if (type === 'last') {
         template =
           '<a href="#" class="tui-page-btn tui-last custom-class-last">' +
-          '<span class="tui-ico-last">20</span>' +
+          '<span class="tui-ico-last">»</span>' +
           '</a>';
       }
 
