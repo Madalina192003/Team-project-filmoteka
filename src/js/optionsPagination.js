@@ -34,19 +34,17 @@ export const options = {
           '<span class="material-icons-outlined"><<<back</span>' +
           '</a>';
       }
-
       if (type === 'next') {
         template =
           '<a href="#" class="arrow tui-page-btn tui-next custom-class-next">' +
           '<span class="material-icons-outlined">>>>forward</span>' +
           '</a>';
       }
-
       if (type === 'last') {
         template =
           '<a href="#" class="tui-page-btn tui-last custom-class-last">' +
-          '<span class="tui-ico-last">20</span>';
-        ('</a>');
+          '<span class="tui-ico-last">20</span>' +
+          '</a>';
       }
 
       return template;
